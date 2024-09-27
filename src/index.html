@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="index.js" type="module"></script>
-  </body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validador de Tarjeta de Crédito</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Validar Tarjeta de Crédito</h1>
+    <div class="form-group">
+      <label for="cardNumber">Número de Tarjeta:</label>
+      <input type="text" id="cardNumber" maxlength="16">
+    </div>
+    <button id="validateBtn">Validar</button>
+    <div id="result">
+      <p id="maskedCard"></p>
+      <p id="validationMessage"></p>
+    </div>
+  </div>
+  <script type="module" src="index.js"></script>
+</body>
 </html>
