@@ -131,8 +131,8 @@ button:hover {
         display: flex;
         align-items: center;
         flex-direction: column;
-        margin-top: 20px;
-        
+        margin: auto;
+        margin-top: 30px;
     }
 
     img {
@@ -147,7 +147,7 @@ button:hover {
     .container {
         display: block;
         width: 90%;
-        margin:  50px 20px;
+        margin: 0 auto;
         text-align: center;
         margin-top: 13rem;
         padding: 20px;
