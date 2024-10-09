@@ -1,5 +1,5 @@
-
 .wrapper {
+    margin-right: 90px;
     display: flex;
     justify-content: flex-start; 
     align-items: center;
@@ -125,4 +125,51 @@ button:hover {
 
 .input-wrapper {
     width: 48%;
+}
+@media (max-width: 600px) {
+    .wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 20px;
+        
+    }
+
+    img {
+        top: 10px;
+    }
+
+    .credit-card-container {
+        width: 90%;
+        height: auto;
+    }
+
+    .container {
+        display: block;
+        width: 90%;
+        margin:  50px 20px;
+        text-align: center;
+        margin-top: 13rem;
+        padding: 20px;
+        max-width: 100%;
+        box-shadow: none;
+    }
+
+    .small-inputs {
+        flex-direction: column;
+    }
+
+    .input-wrapper {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    input {
+        font-size: 1rem;
+    }
 }
