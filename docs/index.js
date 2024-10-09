@@ -11,7 +11,7 @@ document.getElementById('validateBtn').addEventListener('click', function() {
   }
 });
 
-document.getElementById('cardNumber').addEventListener('input', function (e) {
+document.getElementById('cardNumber').addEventListener('input', function(e) {
   let input = e.target.value;
   
   input = input.replace(/\s/g, '');
@@ -34,4 +34,36 @@ fechaInput.addEventListener('input', function(e) {
   
   const inputLength = value.length;
   fechaInput.setSelectionRange(inputLength, inputLength);
+});
+
+document.getElementById('cardNumber').addEventListener('input', function(e) {
+  let cardNumber = e.target.value.replace(/\s/g, '').toUpperCase();
+  let formattedCardNumber = cardNumber.match(/.{1,4}/g)?.join(' ') || '';
+  document.getElementById('cardNumberDisplay').textContent = formattedCardNumber;
+});
+
+document.getElementById('nombre').addEventListener('input', function(e) {
+  let cardName = e.target.value.toUpperCase();
+  document.getElementById('cardName').textContent = cardName;
+});
+
+document.getElementById('fecha').addEventListener('input', function(e) {
+  let expiryDate = e.target.value.toUpperCase();
+  document.getElementById('expiryDate').textContent = expiryDate;
+});
+
+const creditCard = document.querySelector('.credit-card');
+const cvvInput = document.getElementById('cvv');
+const cvvDisplay = document.getElementById('cvvDisplay');
+
+cvvInput.addEventListener('focus', () => {
+  creditCard.classList.add('flipped');
+});
+
+cvvInput.addEventListener('input', () => {
+  cvvDisplay.textContent = cvvInput.value;
+});
+
+cvvInput.addEventListener('blur', () => {
+  creditCard.classList.remove('flipped');
 });

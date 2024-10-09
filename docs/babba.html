@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación con CSS</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #222;
+        }
+
+        .animacion {
+            width: 100px;
+            height: 100px;
+            background-color: #f39c12;
+            border-radius: 50%;
+            position: relative;
+            animation: mover 2s infinite alternate;
+        }
+
+        @keyframes mover {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(300px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animacion"></div>
+</body>
+</html>
